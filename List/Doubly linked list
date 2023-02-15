@@ -1,0 +1,15 @@
+// 定义链表中的节点结构体
+type Element struct {
+    next, prev *Element
+    //元素所在链表
+    list *List
+    Value interface{}
+}
+
+// 链表结构体
+type List struct {
+    // 根节点，链表的起点，不存值。
+    //直接访问root.pre和root.next分别是链表的最后一个节点和第一个节点
+    root Element
+    len  int     // 当前链表长度，不包含根节点
+}
